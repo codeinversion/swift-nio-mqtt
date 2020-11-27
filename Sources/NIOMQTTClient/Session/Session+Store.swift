@@ -30,7 +30,8 @@ extension Session {
             guard let (index, element) = dictionary[identifier] else {
                 return nil
             }
-            orders.remove(at: index)
+            orders.removeAll { $0 == identifier }
+//            orders.remove(at: index)
             return element
         }
 
